@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Information</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center" style="background-image: url({{m.image}}); background-size: 100%;">
+      <h1 style="color: #FFF">Checkout What's New On Mars</h1>
+      <p style="color: #FFF">WOW Cool</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+    </div>
+    <h2>Recent Mars News</h2>
+    <h3>{{ m.headline }}</h3>
+    <h4>{{ m.body }}</h4>
+    <h2>More Mars Info!</h2>
+    {{ m.table | safe}}
+  </div>
+</body>
+
+</html>
